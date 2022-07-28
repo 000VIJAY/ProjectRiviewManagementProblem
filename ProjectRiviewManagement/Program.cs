@@ -37,3 +37,4 @@ management.Toprecords(productReview);
 management.SelectedRecords(productReview);
 management.CountBtyProductId(productReview);
 management.RetrieveOnlyProductIdAndReview(productReview);
+management.SkipTopRecords(productReview);
