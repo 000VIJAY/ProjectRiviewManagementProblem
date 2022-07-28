@@ -38,5 +38,6 @@ management.SelectedRecords(productReview);
 management.CountBtyProductId(productReview);
 management.RetrieveOnlyProductIdAndReview(productReview);
 management.SkipTopRecords(productReview);
+management.FindAvgRating(productReview);
 Table table = new Table();
 table.createTable();

@@ -60,5 +60,13 @@ namespace ProjectRiviewManagement
                                 + "  Rating: " + item.Rating + "  Review: " + item.Review + "  IsLike: " + item.IsLike);
             }
         }
+        public void FindAvgRating(List<ProductReview> productReviews)
+        {
+            var result = productReviews.GroupBy(info => info.ProductId).Select(group => new { products = group.Key, Count = group.Average(a => a.Rating) });
+            foreach (var data in result)
+            {
+                Console.WriteLine("Product Id:{0} => Average Rating :{1}", data.products, data.Count);
+            }
+        }
     }
 }
