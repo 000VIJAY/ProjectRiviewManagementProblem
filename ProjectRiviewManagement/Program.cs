@@ -25,7 +25,17 @@ List<ProductReview> productReview = new List<ProductReview>()
             new ProductReview() { ProductId = 22 , UserId = 22, Rating = 3 , Review = "Okay" , IsLike = false},
             new ProductReview() { ProductId = 23 , UserId = 23, Rating = 3 , Review = "Okay" , IsLike = false},
             new ProductReview() { ProductId = 24 , UserId = 24, Rating = 2 , Review = "bad" , IsLike = true},
-            new ProductReview() { ProductId = 25 , UserId = 25, Rating = 1 , Review = "very bad" , IsLike = false}
+            new ProductReview() { ProductId = 25 , UserId = 25, Rating = 1 , Review = "very bad" , IsLike = false},
+             new ProductReview() { ProductId = 26 , UserId = 10, Rating = 2 , Review = " bad" , IsLike = true},
+             new ProductReview() { ProductId = 27 , UserId = 25, Rating = 4 , Review = "Very Good" , IsLike = true},
+             new ProductReview() { ProductId = 28 , UserId = 10, Rating = 5 , Review = "Nice" , IsLike = true},
+             new ProductReview() { ProductId = 29 , UserId = 10, Rating = 3 , Review = "Okay" , IsLike = false},
+             new ProductReview() { ProductId = 30 , UserId = 10, Rating = 2 , Review = " bad" , IsLike = false},
+             new ProductReview() { ProductId = 31, UserId = 10, Rating = 1 , Review = "very bad" , IsLike = false},
+             new ProductReview() { ProductId = 32 , UserId = 10, Rating = 3 , Review = "okey" , IsLike = false},
+             new ProductReview() { ProductId = 33 , UserId = 10, Rating = 2 , Review = " bad" , IsLike = true},
+             new ProductReview() { ProductId = 34 , UserId = 10, Rating = 5 , Review = "Nice" , IsLike = false}
+
             };
 foreach (var item in productReview)
 {
@@ -40,5 +50,6 @@ management.RetrieveOnlyProductIdAndReview(productReview);
 management.SkipTopRecords(productReview);
 management.FindAvgRating(productReview);
 management.RetrieveReview(productReview);
+management.RetrieveDataofSameUserId(productReview);
 Table table = new Table();
 table.createTable();

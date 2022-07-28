@@ -77,5 +77,14 @@ namespace ProjectRiviewManagement
             }
            
         }
+        public void RetrieveDataofSameUserId(List<ProductReview> productReview)
+        {
+            var records = (from productReviews in productReview where productReviews.UserId == 10 orderby productReviews.Rating ascending select productReviews);
+            foreach (var item in records)
+            {
+                Console.WriteLine("ProductId: " + item.ProductId + "  UserId: " + item.UserId
+                                + "  Rating: " + item.Rating + "  Review: " + item.Review + "  IsLike: " + item.IsLike);
+            }
+        }
     }
 }
