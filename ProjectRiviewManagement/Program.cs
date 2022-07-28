@@ -27,10 +27,11 @@ List<ProductReview> productReview = new List<ProductReview>()
             new ProductReview() { ProductId = 24 , UserId = 24, Rating = 2 , Review = "bad" , IsLike = true},
             new ProductReview() { ProductId = 25 , UserId = 25, Rating = 1 , Review = "very bad" , IsLike = false}
             };
-//foreach (var item in productreview)
-//{
-//    console.writeline("productid: " + item.productid + "  userid: " + item.userid
-//                    + "  rating: " + item.rating + "  review: " + item.review + "  islike: " + item.islike);
-//}
+foreach (var item in productReview)
+{
+    Console.WriteLine("productid: " + item.ProductId + "  userid: " + item.UserId
+                    + "  rating: " + item.Rating + "  review: " + item.Review + "  islike: " + item.IsLike);
+}
 Management management = new Management();
 management.Toprecords(productReview);
+management.SelectedRecords(productReview);

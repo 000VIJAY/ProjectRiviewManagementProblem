@@ -21,5 +21,18 @@ namespace ProjectRiviewManagement
                                 + "  Rating: " + item.Rating + "  Review: " + item.Review + "  IsLike: " + item.IsLike);
             }
         }
+        public void SelectedRecords(List<ProductReview> productReview)
+        {
+            var recordData = from productReviews in productReview
+                             where (productReviews.ProductId == 1 && productReviews.Rating > 3)
+                             || (productReviews.ProductId == 4 && productReviews.Rating > 3)
+                             || (productReviews.ProductId == 9 && productReviews.Rating > 3)
+                             select productReviews;
+            foreach (var item in recordData)
+            {
+                Console.WriteLine("ProductId: " + item.ProductId + "  UserId: " + item.UserId
+                                + "  Rating: " + item.Rating + "  Review: " + item.Review + "  IsLike: " + item.IsLike);
+            }
+        }
     }
 }
