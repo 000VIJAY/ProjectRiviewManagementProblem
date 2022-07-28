@@ -36,3 +36,4 @@ Management management = new Management();
 management.Toprecords(productReview);
 management.SelectedRecords(productReview);
 management.CountBtyProductId(productReview);
+management.RetrieveOnlyProductIdAndReview(productReview);

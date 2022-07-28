@@ -42,5 +42,13 @@ namespace ProjectRiviewManagement
                 Console.WriteLine(item.ProductId + "------" + item.Count);
             }
         }
+        public void RetrieveOnlyProductIdAndReview(List<ProductReview> productReview)
+        {
+            var records = from productReviews in productReview where (productReviews.ProductId > 0) select productReviews;
+            foreach (var record in records)
+            {
+                Console.WriteLine("Product Id: " + record.ProductId + "  Reeview: " + record.Review);
+            }
+        }
     }
 }
