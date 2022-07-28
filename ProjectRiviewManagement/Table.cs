@@ -42,7 +42,13 @@ namespace ProjectRiviewManagement
             table.Rows.Add("23", "23", "3", "Okay", true);
             table.Rows.Add("24", "24", "4", "very good", false);
             table.Rows.Add("25", "25", "2", "bad", true);
-            foreach (DataRow row in table.Rows)
+
+            //print only alike values
+            Console.WriteLine("");
+            IEnumerable<DataRow> rows = table.AsEnumerable().Where(r => r.Field<string>("Islike") == "True");
+            Console.WriteLine("\n-----------Data from datatable who's islike value is true------------");
+            Console.WriteLine("");
+            foreach (DataRow row in rows)
             {
                 Console.WriteLine(row["ProductId"] + "\t|" + row["UserId"] + "\t|" + row["Review"] + "\t|" + row["Rating"] + "\t|" + row["Islike"]);
             }
