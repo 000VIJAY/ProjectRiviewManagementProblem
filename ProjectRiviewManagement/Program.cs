@@ -38,3 +38,5 @@ management.SelectedRecords(productReview);
 management.CountBtyProductId(productReview);
 management.RetrieveOnlyProductIdAndReview(productReview);
 management.SkipTopRecords(productReview);
+Table table = new Table();
+table.createTable();
