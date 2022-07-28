@@ -35,3 +35,4 @@ foreach (var item in productReview)
 Management management = new Management();
 management.Toprecords(productReview);
 management.SelectedRecords(productReview);
+management.CountBtyProductId(productReview);

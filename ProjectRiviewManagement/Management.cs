@@ -34,5 +34,13 @@ namespace ProjectRiviewManagement
                                 + "  Rating: " + item.Rating + "  Review: " + item.Review + "  IsLike: " + item.IsLike);
             }
         }
+        public void CountBtyProductId(List<ProductReview> productReview)
+        {
+            var recordedData = productReview.GroupBy(x => x.ProductId).Select(x => new { ProductId = x.Key, Count = x.Count() });
+            foreach (var item in recordedData)
+            {
+                Console.WriteLine(item.ProductId + "------" + item.Count);
+            }
+        }
     }
 }
